@@ -142,7 +142,7 @@ def control(fan: Fan, tmin: float, tmax: float, interval: int, epsilon: float):
 def run(
         index: int = 0, 
         pin: int = 14, 
-        tmin: float = 55, 
+        tmin: float = 50, 
         tmax: float = 75, 
         interval: int = 10, 
         epsilon: float = 1):
@@ -179,7 +179,7 @@ if __name__ == '__main__':
     parser.add_argument(
         "--tmin",
         dest="tmin",
-        default=55,
+        default=50,
         type=float,
         help="The temperature at which the fan speed will be set to 0%"
     )
