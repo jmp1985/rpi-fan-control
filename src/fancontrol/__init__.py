@@ -21,7 +21,7 @@ def configure_logging():
         os.makedirs(os.path.dirname(LOGFILE))
     
     logging.basicConfig(
-        format='%(asctime)s %(name)s %(levelname)s %(message)s',
+        format='%(levelname)s %(message)s',
         datefmt='%H:%M:%S',
         level=logging.DEBUG,
         handlers=[

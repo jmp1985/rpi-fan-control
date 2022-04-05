@@ -30,7 +30,7 @@ class InstallCommand(install):
         # Enable the systemd service
         subprocess.run(["systemctl", "daemon-reload"])
         subprocess.run(["systemctl", "enable", "rpi-fancontrol.service"])
-        subprocess.run(["systemctl", "start", "rpi-fancontrol.service"])
+        subprocess.run(["systemctl", "restart", "rpi-fancontrol.service"])
 
 
 def main():
