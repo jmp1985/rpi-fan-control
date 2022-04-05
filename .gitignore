@@ -106,5 +106,5 @@ venv.bak/
 # ctags
 tags
 
-# setuptools_scm
-src/parakeet/_version.py
+# Vim stuff
+*.swp

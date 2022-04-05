@@ -1,0 +1,12 @@
+[Unit]
+Description=Fan control service
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+User=root
+ExecStart=/usr/local/bin/rpi-fancontrol
+
+[Install]
+WantedBy=multi-user.target

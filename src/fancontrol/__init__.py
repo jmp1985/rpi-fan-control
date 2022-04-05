@@ -162,7 +162,11 @@ def run(
         control(fan, tmin, tmax, interval, epsilon)
 
 
-if __name__ == '__main__':
+def main():
+    """
+    The command line entry point
+
+    """
 
     configure_logging()
     
@@ -203,3 +207,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     run(0, args.pin, args.tmin, args.tmax, args.interval)
+
+
+if __name__ == '__main__':
+    main()

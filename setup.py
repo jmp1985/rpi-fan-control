@@ -24,12 +24,13 @@ class InstallCommand(install):
         # Copy the service file to the systemd directory
         directory = os.path.dirname(os.path.realpath(__file__))
         src = os.path.join(directory, "systemd/rpi-fancontrol.service")
-        dst = "/lib/systemd/system"
+        dst = "/lib/systemd/system/rpi-fancontrol.service"
         shutil.copyfile(src, dst)
         
         # Enable the systemd service
         subprocess.run(["systemctl", "daemon-reload"])
         subprocess.run(["systemctl", "enable", "rpi-fancontrol.service"])
+        subprocess.run(["systemctl", "start", "rpi-fancontrol.service"])
 
 
 def main():
