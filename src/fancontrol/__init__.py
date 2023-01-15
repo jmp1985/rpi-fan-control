@@ -47,7 +47,7 @@ def get_temperature() -> float:
     filename = "/sys/class/thermal/thermal_zone0/temp"
     with open(filename) as infile:
         temperature = float(infile.read()) / 1000.0
-        logging.info("Reading CPU temperature = %.1f %%" % temperature)
+        logging.info("Reading CPU temperature = %.1f C" % temperature)
     return temperature
 
 
